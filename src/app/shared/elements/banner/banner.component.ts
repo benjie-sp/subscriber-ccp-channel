@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { allFeatured } from '../../mock-data';
@@ -11,6 +11,7 @@ declare var $: any;
   styleUrl: './banner.component.css'
 })
 export class BannerComponent implements OnInit, AfterViewInit{
+  @ViewChild('video') videoElement!: ElementRef<HTMLVideoElement>;
   mediaData: any[] = allFeatured;
   currentMediaIndex: number = 0;
   showPhoto: boolean = true;

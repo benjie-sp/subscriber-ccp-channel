@@ -6,7 +6,7 @@
     min-height: 16vw;
 
     .label {
-      color: var(--tertiary);
+      color: var(--gray);
       line-height: 0;
       display: flex;
       align-content: center;

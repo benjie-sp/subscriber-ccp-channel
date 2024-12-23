@@ -9,9 +9,10 @@
       />
       } @if (!showPhoto && mediaData[currentMediaIndex].teaser) {
       <video
+        #video
         [src]="mediaData[currentMediaIndex].teaser"
-        autoplay
-        muted
+        [autoplay]="true"
+        [muted]="true"
         (ended)="showPhoto = true"
       ></video>
       }

@@ -17,7 +17,7 @@
   position: relative;
 
   .label {
-    font-size: 1em;
+    font-size: 1vw;
     text-transform: capitalize;
   }
 

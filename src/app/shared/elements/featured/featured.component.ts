@@ -2,10 +2,11 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { allFeatured } from '../../mock-data';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-featured',
-  imports: [SlickCarouselModule, MatCardModule],
+  imports: [SlickCarouselModule, MatCardModule, MatIconModule],
   templateUrl: './featured.component.html',
   styleUrl: './featured.component.css'
 })

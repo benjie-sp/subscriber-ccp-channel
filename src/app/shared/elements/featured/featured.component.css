@@ -37,11 +37,77 @@
   height: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  /* border-radius: 1em; */
+
+  .image {
+    display: block;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .actions {
+    display: block;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+    /* border-radius: 0 0 1em 1em; */
+    font-size: 0.9vw;
+    padding: 1em 0;
+    font-weight: bold;
+  }
+
+  .actions-hovered {
+    display: none;
+    color: var(--accent);
+    background-color: var(--secondary);
+    transition: transform 0.3s ease;
+    font-size: 0.9vw;
+    padding: 1em;
+    font-weight: bold;
+
+    .action-buttons {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        color: var(--gray);
+        font-weight:lighter;
+
+        mat-icon {
+            font-size: 1.6vw;
+        }
+
+        mat-icon:hover {
+            color: var(--accent);
+        }
+    }
+  }
 }
 
 .card:hover {
+  cursor: pointer;
   z-index: 100;
-  transform: scale(1.5); /* Slight zoom-in effect on hover */
+  transform: scale(1.1); /* Slight zoom-in effect on hover */
+
+  .image {
+    display: none;
+  }
+
+  .video {
+    display: block;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .actions-hovered {
+    box-shadow: 0 0 19px 10px rgba(255, 255, 255, 0.2);
+    display: block;
+    transition: transform 0.3s ease;
+  }
 }
 
 .scroll-btn {

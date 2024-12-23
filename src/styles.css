@@ -8,6 +8,8 @@
   --primary: #962e45;
   --secondary: #000000;
   --tertiary: #ffffff;
+  --accent: #977A00;
+  --gray: #d5d5d5;
 
   /* body */
   --body-linear-gradient: linear-gradient(
@@ -23,7 +25,7 @@
     color: var(--tertiary) !important;
     min-height: 2.5em;
     min-width: 8.688em;
-    font-size: 1em;
+    font-size: 0.9vw;
   };
 
   .buttonSignIn {
