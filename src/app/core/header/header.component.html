@@ -1,0 +1,64 @@
+<header class="main-header" [class.scrolled]="isScrolled">
+  <div class="contents">
+    @if (isAuthenticated == 'null') {
+    <div class="header-logo">
+      <a href="/landing-page"
+        ><img src="ccp-logo-rmvbg.PNG" alt="header-logo"
+      /></a>
+    </div>
+    <div>
+      <button (click)="signInOnClick()" class="buttonMS" mat-stroked-button>
+        Sign In
+      </button>
+    </div>
+    } @else if (isAuthenticated == 'true') {
+    <div class="header-logo">
+      <a href="/home"><img src="ccp-logo-rmvbg.PNG" alt="header-logo" /></a>
+    </div>
+    <div>
+      <app-navigation />
+    </div>
+    <div>
+      <button class="search" mat-icon-button>
+        <mat-icon>search</mat-icon>
+      </button>
+      <div class="header-right">
+        <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+          <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <mat-card>
+            <mat-card-header>
+              <div class="user">
+                <button mat-icon-button>
+                  <mat-icon>person</mat-icon>
+                </button>
+                <div>
+                  <mat-card-title> {{ username }}</mat-card-title>
+                  <mat-card-subtitle>{{ email }}</mat-card-subtitle>
+                </div>
+              </div>
+            </mat-card-header>
+            <mat-card-content>
+              <button mat-raised-button color="primary">
+                <mat-icon>favorite</mat-icon><span>Favourites</span>
+              </button>
+              <button mat-raised-button color="primary">
+                <mat-icon>settings</mat-icon><span>Settings</span>
+              </button>
+            </mat-card-content>
+            <div class="divider">
+              <mat-divider></mat-divider>
+            </div>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="logout()">
+                <mat-icon>logout</mat-icon><span>Logout</span>
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-menu>
+      </div>
+    </div>
+    }
+  </div>
+</header>

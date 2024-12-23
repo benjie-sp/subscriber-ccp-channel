@@ -1,0 +1,33 @@
+.card {
+    max-width: 25em;
+}
+
+.red {
+    color: red;
+    display: flex;
+    column-gap: 0.5em;
+    align-items: center;
+    padding: 1em 1em 0.5em;
+    margin-bottom: 0em;
+}
+
+.close-button {
+    color: #ffffff;
+    background-color: #865b9d;
+    /* cursor: pointer;
+    padding: 0.5em;
+    width: 6em;
+    border-radius: 15px;
+    border: hidden; */
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    padding: 1em 2em 0.5em;
+    margin-bottom: 0em;
+}

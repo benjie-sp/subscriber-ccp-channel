@@ -1,0 +1,19 @@
+.home-div {
+  background-color: var(--secondary);
+  display: inline-table;
+
+  .frc {
+    min-height: 16vw;
+
+    .label {
+      color: var(--tertiary);
+      line-height: 0;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 1.5em;
+      font-size: 1.5vw;
+    }
+  }
+}

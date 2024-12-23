@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <ul class="nav-list">
+      <li *ngFor="let item of navItems; let i = index" class="nav-item" [ngClass]="{'hidden-item': i >= 5}">
+        <a
+          [routerLink]="item.routeLink"
+          routerLinkActive="active"
+          [class.active]="item.routeLink === currentRoute"
+        >
+          <span class="label" [ngClass]="{'focus-label': item.routeLink === currentRoute}">{{ item.label }}</span>
+          <span class="dot" *ngIf="item.routeLink === currentRoute"></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  

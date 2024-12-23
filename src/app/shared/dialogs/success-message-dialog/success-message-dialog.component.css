@@ -1,0 +1,22 @@
+.card {
+    max-width: 25em;
+}
+
+.blue {
+    color: green;
+    display: flex;
+    align-items: center;
+    padding: 1em 1em 0.5em;
+    margin-bottom: 0em;
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    padding: 1em 2em 0.5em;
+    margin-bottom: 0em;
+}

@@ -1,0 +1,11 @@
+<div class="supermain-div">
+  <div class="main-div" #scrollContainer>
+    @for (item of visibleItems; track item) {
+    <mat-card class="card">
+      <img mat-card-image [src]="item.banner" [alt]="item.title" />
+    </mat-card>
+    }
+  </div>
+  <button class="scroll-btn left" (click)="prevPage()">&#8249;</button>
+  <button class="scroll-btn right" (click)="nextPage()">&#8250;</button>
+</div>

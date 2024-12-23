@@ -1,0 +1,41 @@
+<footer class="footer-main">
+    <div class="level2">
+        <div class="navigations">
+            <div>
+                <img src="logo.png" alt="ccp-logo">
+            </div>
+            <div *ngFor="let section of footerContents">
+                <div class="footer-section">
+                  
+                  <h4>{{ section.title }}</h4>
+                  
+                  <ul *ngIf="section.items">
+                    <li *ngFor="let item of section.items">
+                      <a [href]="item.url">{{ item.label}}</a>
+                    </li>
+                  </ul>
+
+                  <div *ngIf="section.email || section.phone">
+                    <p *ngIf="section.email"><a [href]="'mailto:' + section.email">{{ section.email }}</a></p>
+                    <p *ngIf="section.phone"><a [href]="'tel:' + section.phone">{{ section.phone }}</a></p>
+                  </div>
+
+                  <div class="socials" *ngIf="section.items">
+                    <div *ngFor="let item of section.items">
+                        <div *ngIf="item.icon">
+                            <a  [href]="item.url">
+                                <button mat-icon-button>
+                                    <i class="{{item.icon}}"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="level1">
+        <p class="copyright">© 2024 CCP. All Rights Reserved. </p>
+    </div>
+</footer>
